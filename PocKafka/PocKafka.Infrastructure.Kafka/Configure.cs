@@ -16,8 +16,9 @@ namespace PocKafka.Infrastructure.Kafka
             var bootstrapServers = Environment.GetEnvironmentVariable("BOOTSTRAP_SERVERS");
             var schemaRegistryUrl = Environment.GetEnvironmentVariable("SCHEMA_REGISTRY_URL");
             var schemaRegistryBasicAuthUserInfo = Environment.GetEnvironmentVariable("SCHEMA_REGISTRY_BASIC_AUTH_USER_INFO");
-            var sslCaLocation = Environment.GetEnvironmentVariable("SSL_CA_LOCATION");
             var consumerGroupId = Environment.GetEnvironmentVariable("CONSUMER_GROUP_ID");
+            var sslCaLocation = Environment.GetEnvironmentVariable("SSL_CA_LOCATION");
+            var sslEndpointIdentificationAlgorithm = sslCaLocation == null ? (SslEndpointIdentificationAlgorithm?)null : SslEndpointIdentificationAlgorithm.Https;
 
             if (username != null && password != null)
             {
@@ -42,7 +43,7 @@ namespace PocKafka.Infrastructure.Kafka
                         SaslMechanism = SaslMechanism.Plain,
                         SaslUsername = username,
                         SaslPassword = password,
-                        SslEndpointIdentificationAlgorithm = SslEndpointIdentificationAlgorithm.Https,
+                        SslEndpointIdentificationAlgorithm = sslEndpointIdentificationAlgorithm,
                         SslCaLocation = sslCaLocation,
                         GroupId = consumerGroupId
                     })
