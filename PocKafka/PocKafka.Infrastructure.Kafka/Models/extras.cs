@@ -13,9 +13,9 @@ namespace PocKafka.Infrastructure.Kafka.Models
 	using global::Avro;
 	using global::Avro.Specific;
 	
-	public partial class extras : ISpecificRecord
+	public partial class Extras : ISpecificRecord
 	{
-		public static Schema _SCHEMA = Schema.Parse(@"{""type"":""record"",""name"":""extras"",""namespace"":""PocKafka.Infrastructure.Kafka.Models"",""fields"":[{""name"":""clientId"",""doc"":""Client ID."",""type"":""string""},{""name"":""licensePlate"",""doc"":""License plate."",""type"":""string""},{""name"":""vin"",""doc"":""Vehicle Identification Number (VIN, in portuguese, Chassi)."",""type"":""string""}]}");
+		public static Schema _SCHEMA = Schema.Parse(@"{""type"":""record"",""name"":""Extras"",""namespace"":""PocKafka.Infrastructure.Kafka.Models"",""fields"":[{""name"":""clientId"",""doc"":""Client ID."",""type"":""string""},{""name"":""licensePlate"",""doc"":""License plate."",""type"":""string""},{""name"":""vin"",""doc"":""Vehicle Identification Number (VIN, in portuguese, Chassi)."",""type"":""string""}]}");
 		/// <summary>
 		/// Client ID.
 		/// </summary>
@@ -32,7 +32,7 @@ namespace PocKafka.Infrastructure.Kafka.Models
 		{
 			get
 			{
-				return extras._SCHEMA;
+				return Extras._SCHEMA;
 			}
 		}
 		/// <summary>

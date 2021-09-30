@@ -13,9 +13,9 @@ namespace PocKafka.Infrastructure.Kafka.Models
 	using global::Avro;
 	using global::Avro.Specific;
 	
-	public partial class coordinates : ISpecificRecord
+	public partial class Coordinates : ISpecificRecord
 	{
-		public static Schema _SCHEMA = Schema.Parse(@"{""type"":""record"",""name"":""coordinates"",""namespace"":""PocKafka.Infrastructure.Kafka.Models"",""fields"":[{""name"":""latitude"",""doc"":""Latitude of the location."",""type"":""double""},{""name"":""longitude"",""doc"":""Longitude of the location."",""type"":""double""},{""name"":""accuracy"",""doc"":""Accuracy in meters."",""type"":""double""},{""name"":""speed"",""doc"":""Speed in meters / second. Note: Only present when location came from GPS. -1 otherwise."",""type"":""double""},{""name"":""heading"",""doc"":""Heading in degrees. Note: Only present when location came from GPS. -1 otherwise."",""type"":""double""},{""name"":""altitude"",""doc"":""Altitude above sea-level in meters."",""type"":""double""}]}");
+		public static Schema _SCHEMA = Schema.Parse(@"{""type"":""record"",""name"":""Coordinates"",""namespace"":""PocKafka.Infrastructure.Kafka.Models"",""fields"":[{""name"":""latitude"",""doc"":""Latitude of the location."",""type"":""double""},{""name"":""longitude"",""doc"":""Longitude of the location."",""type"":""double""},{""name"":""accuracy"",""doc"":""Accuracy in meters."",""type"":""double""},{""name"":""speed"",""doc"":""Speed in meters / second. Note: Only present when location came from GPS. -1 otherwise."",""type"":""double""},{""name"":""heading"",""doc"":""Heading in degrees. Note: Only present when location came from GPS. -1 otherwise."",""type"":""double""},{""name"":""altitude"",""doc"":""Altitude above sea-level in meters."",""type"":""double""}]}");
 		/// <summary>
 		/// Latitude of the location.
 		/// </summary>
@@ -44,7 +44,7 @@ namespace PocKafka.Infrastructure.Kafka.Models
 		{
 			get
 			{
-				return coordinates._SCHEMA;
+				return Coordinates._SCHEMA;
 			}
 		}
 		/// <summary>

@@ -36,7 +36,7 @@
             "name": "coordinates",
             "doc": "latitude, longitude, speed, heading, etc.",
             "type": {
-                "name": "coordinates",
+                "name": "Coordinates",
                 "type": "record",
                 "fields": [
                     {
@@ -76,7 +76,7 @@
             "name": "activity",
             "doc": "Device motion-activity when this location was recorded (eg: still, on_foot, in_vehicle).",
             "type": {
-                "name": "activity",
+                "name": "Activity",
                 "type": "record",
                 "fields": [
                     {
@@ -96,7 +96,7 @@
             "name": "battery",
             "doc": "Device battery level when the location was recorded.",
             "type": {
-                "name": "battery",
+                "name": "Battery",
                 "type": "record",
                 "fields": [
                     {
@@ -129,7 +129,7 @@
             "name": "extras",
             "doc": "Business related data.",
             "type": {
-                "name": "extras",
+                "name": "Extras",
                 "type": "record",
                 "fields": [
                     {

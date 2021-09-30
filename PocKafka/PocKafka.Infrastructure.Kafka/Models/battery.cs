@@ -13,9 +13,9 @@ namespace PocKafka.Infrastructure.Kafka.Models
 	using global::Avro;
 	using global::Avro.Specific;
 	
-	public partial class battery : ISpecificRecord
+	public partial class Battery : ISpecificRecord
 	{
-		public static Schema _SCHEMA = Schema.Parse(@"{""type"":""record"",""name"":""battery"",""namespace"":""PocKafka.Infrastructure.Kafka.Models"",""fields"":[{""name"":""level"",""doc"":""Battery level. 0.0 = empty; 1.0 = full charge."",""type"":""float""},{""name"":""isCharging"",""doc"":""true when device is plugged in to power."",""type"":""boolean""}]}");
+		public static Schema _SCHEMA = Schema.Parse(@"{""type"":""record"",""name"":""Battery"",""namespace"":""PocKafka.Infrastructure.Kafka.Models"",""fields"":[{""name"":""level"",""doc"":""Battery level. 0.0 = empty; 1.0 = full charge."",""type"":""float""},{""name"":""isCharging"",""doc"":""true when device is plugged in to power."",""type"":""boolean""}]}");
 		/// <summary>
 		/// Battery level. 0.0 = empty; 1.0 = full charge.
 		/// </summary>
@@ -28,7 +28,7 @@ namespace PocKafka.Infrastructure.Kafka.Models
 		{
 			get
 			{
-				return battery._SCHEMA;
+				return Battery._SCHEMA;
 			}
 		}
 		/// <summary>

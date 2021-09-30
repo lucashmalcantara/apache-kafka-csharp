@@ -13,9 +13,9 @@ namespace PocKafka.Infrastructure.Kafka.Models
 	using global::Avro;
 	using global::Avro.Specific;
 	
-	public partial class activity : ISpecificRecord
+	public partial class Activity : ISpecificRecord
 	{
-		public static Schema _SCHEMA = Schema.Parse(@"{""type"":""record"",""name"":""activity"",""namespace"":""PocKafka.Infrastructure.Kafka.Models"",""fields"":[{""name"":""type"",""doc"":""The reported device motion activity (still, walking, on_foot, running, on_bicycle, in_vehicle)."",""type"":""string""},{""name"":""confidence"",""doc"":""Confidence of the reported device motion activity in %."",""type"":""float""}]}");
+		public static Schema _SCHEMA = Schema.Parse(@"{""type"":""record"",""name"":""Activity"",""namespace"":""PocKafka.Infrastructure.Kafka.Models"",""fields"":[{""name"":""type"",""doc"":""The reported device motion activity (still, walking, on_foot, running, on_bicycle, in_vehicle)."",""type"":""string""},{""name"":""confidence"",""doc"":""Confidence of the reported device motion activity in %."",""type"":""float""}]}");
 		/// <summary>
 		/// The reported device motion activity (still, walking, on_foot, running, on_bicycle, in_vehicle).
 		/// </summary>
@@ -28,7 +28,7 @@ namespace PocKafka.Infrastructure.Kafka.Models
 		{
 			get
 			{
-				return activity._SCHEMA;
+				return Activity._SCHEMA;
 			}
 		}
 		/// <summary>
